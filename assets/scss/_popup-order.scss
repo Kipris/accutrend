@@ -1,0 +1,202 @@
+.popup-order {
+  .info {
+    position: relative;
+    text-align: center;
+    padding: 0 10px;
+    color: #1c1c1c;
+    font-size: 11px;
+    line-height: 19px;
+    font-weight: 600;
+    margin-bottom: 45px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -16px;
+      background-color: #e4e4e4;
+    }
+    a {
+      display: block;
+      color: #1c1c1c;
+      font-size: 15px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 1px;
+      line-height: 22.65px;
+      text-decoration: none;
+    }
+  }
+  h5 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18.12px;
+    margin-bottom: 23px;
+  }
+  .partners-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 256px;
+  }
+  .partner {
+    width: calc(50% - 30px);
+    margin: 7px 15px;
+    img {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
+    &.sweetmed {
+      img {
+        width: 82px;
+        height: 18px;
+      }
+    }
+    &.wellsi {
+      img {
+        width: 70px;
+        height: 22px;
+        top: -4px;
+      }
+    }
+    &.alpha-diagnostics {
+      img {
+        width: 85px;
+        height: 32px;
+      }
+    }
+    &.zdravcity {
+      img {
+        width: 94px;
+        height: 15px;
+        top: 10px;
+      }
+    }
+    &.norma-life {
+      img {
+        width: 48px;
+        height: 57px;
+        top: 10px;
+      }
+    }
+  }
+  .juristic {
+    h5 {
+      margin: 40px 0 12px;
+    }
+  }
+  .juristic-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .more-details {
+      cursor: pointer;
+      color: #1b84ce;
+      font-size: 10px;
+      line-height: 24px;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .popup-order {
+    .close {
+      img {
+        width: 13px;
+        height: 13px;
+      }
+    }
+    .popup-content {
+      padding-bottom: 9px;
+    }
+    .info {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 0 41px;
+      margin-bottom: 40px;
+      &::after {
+        bottom: -22px;
+      }
+      a {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    h5 {
+      margin-bottom: 35px;
+    }
+    .partners-wrap {
+      width: 100%;
+    }
+    .partner {
+      margin: 7px 26px;
+      width: calc(100% / 3 - 57px);
+      &.sweetmed {
+        order: 1;
+        img {
+          width: 108px;
+          height: 24px;
+        }
+      }
+      &.wellsi {
+        order: 3;
+        img {
+          width: 93px;
+          height: 29px;
+          top: -1px;
+        }
+      }
+      &.alpha-diagnostics {
+        order: 2;
+        img {
+          width: 112px;
+          height: 42px;
+          top: -7px;
+        }
+      }
+      &.zdravcity {
+        order: 4;
+        img {
+          width: 124px;
+          height: 20px;
+          top: 50px;
+        }
+      }
+      &.norma-life {
+        order: 5;
+        img {
+          width: 64px;
+          height: 76px;
+          top: 22px;
+        }
+      }
+    }
+    .juristic {
+      h5 {
+        margin: 70px 0 28px;
+      }
+    }
+    .juristic-wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .more-details {
+        width: calc(50% - 30px);
+        margin: 7px 11px;
+        font-size: 12px;
+        line-height: 16px;
+        &:nth-child(odd) {
+          padding-left: 5px;
+        }
+        &:nth-child(even) {
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+}

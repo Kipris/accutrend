@@ -1,0 +1,15 @@
+include _data-juristicList.pug
+
+each juristic in juristicList
+  .popup.popup-juristic(id=`popup-${juristic.for}`)
+    .popup-content
+      .popup-title
+        .close
+          img(src='./assets/icons/close.svg' alt='Close popup')
+      .popup-body
+        h5 #{juristic.title}
+        .contact-wrap
+          each phone in juristic.phones
+            a(href=`tel:${phone.attr}`) #{phone.display} #{phone.note}
+          a.mail(href=`mailto:${juristic.email}`) #{juristic.email}
+          a.website(href=juristic.website target='_blank') #{juristic.website}

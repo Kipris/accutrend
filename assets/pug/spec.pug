@@ -1,0 +1,33 @@
+-
+  var specList = [
+    {
+      title: 'Прибор Аккутренд Плюс',
+      img: './assets/img/spec/spec1.png',
+    },
+    {
+      title: 'Дополнительная крышка направляющей для тест-полоски (запасная часть)',
+      img: './assets/img/spec/spec2.png',
+    },
+    {
+      title: 'Крышка аккумуляторного отсека',
+      img: './assets/img/spec/spec3.png',
+    }
+  ]
+
+.spec#spec
+  .container
+    h3 Спецификация прибора
+    .spec-wrap.hidden-g-mobile
+      each spec in specList
+        .spec-item
+          .img
+            img(src=spec.img alt=spec.title)
+          .title #{spec.title}
+    .spec-slider.hidden-desktop
+      each spec in specList
+        .spec-item
+          .img
+            img(src=spec.img alt=spec.title)
+          .title #{spec.title}
+    p *Внимание: тест-полоски и ручка-прокалыватель в комплект не входят
+    button.primary.main-cta.more-details(for='popup-order') Купить

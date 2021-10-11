@@ -1,0 +1,65 @@
+.spec {
+  padding: 63px 0 73px;
+  text-align: center;
+  h3 {
+    font-size: 45px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-bottom: 87px;
+  }
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+  }
+  &-item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .title {
+      margin-top: 28px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+    }
+  }
+  p {
+    margin: 63px 0 29px;
+  }
+}
+
+@media (max-width: 768px) {
+  .spec {
+    padding: 13px 0 43px;
+    h3 {
+      text-align: center;
+      font-size: 22px;
+      line-height: normal;
+      margin-bottom: 43px;
+    }
+    &-slider {
+      position: relative;
+      .slick-dots {
+        top: auto;
+        bottom: -34px;
+      }
+    }
+    &-item {
+      .title {
+        line-height: normal;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      width: 221px;
+      text-align: center;
+      margin: 50px auto 25px;
+    }
+  }
+}

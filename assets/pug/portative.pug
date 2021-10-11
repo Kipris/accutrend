@@ -1,0 +1,160 @@
+-
+  var testTypes = [
+    {
+      type: 'cholesterol',
+      title: 'Холестерин',
+      subtitle: 'Тест-полоски Аккутренд',
+      description: `
+        <ul>
+          <li>упаковка Аккутренд Холестерин №5</li>
+          <li>упаковка Аккутренд Холестерин №25</li>
+        </ul>
+        <div class="info hidden-f-mobile"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
+        <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
+      `,
+      hoverDescription: `
+        <p>
+          Предназначены для определения общего холестерина в крови, используются с экспресс-анализатором Аккутренд Плюс.
+          Данный тест позволяет определить риск развития сердечно-сосудистых заболеваний и атеросклероза.
+        </p>
+        <div><i class="icon icon-diagram"></i>Время измерения до 180 сек</div>
+      `,
+      isProf: false,
+      bgColor: '#edf8f9',
+      dropColor: '#d5ecf6',
+      img: './assets/img/portative/cholesterol.png'
+    },
+    {
+      type: 'triglycerides',
+      title: 'Триглицериды',
+      subtitle: 'Тест-полоски Аккутренд',
+      description: `
+      <ul>
+        <li>упаковка Аккутренд Триглицериды №5</li>
+        <li>упаковка Аккутренд Триглицериды №25</li>
+      </ul>
+      <div class="info hidden-f-mobile"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
+      <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
+      `,
+      hoverDescription: `
+      <p>
+        Предназначены для определения триглицеридов в крови, используются с экспресс-анализатором Accutrend Plus. Данный тест позволяет определить риск развития ишемической болезни сердца и атеросклероза.
+      </p>
+      <div><i class="icon icon-diagram"></i>Время измерения макс 174 сек</div>
+      `,
+      isProf: false,
+      bgColor: '#f6f4f0',
+      dropColor: '#f1ede9',
+      img: './assets/img/portative/triglycerides.png'
+    },
+    {
+      type: 'glucose',
+      title: 'Глюкоза',
+      subtitle: 'Тест-полоски Аккутренд',
+      description: `
+        <div class="info"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
+        <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
+      `,
+      hoverDescription: `
+        <p>Используются для измерения уровня глюкозы в крови</p>
+        <div><i class="icon icon-diagram"></i>Время измерения 12 сек</div>
+      `,
+      isProf: true,
+      bgColor: '#f3f5f7',
+      dropColor: '#eceef2',
+      img: './assets/img/portative/glucose.png'
+    },
+    {
+      type: 'lactate',
+      title: 'Лактат',
+      subtitle: 'Тест-полоски Аккутренд',
+      description: `
+        <ul>
+          <li>упаковка Аккутренд Лактат №25</li>
+        </ul>
+        <div class="info"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
+        <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
+      `,
+      hoverDescription: `
+        <p>Предназначены для измерения уровня молочной кислоты в крови, при помощи биохимического анализатора Аккутренд Плюс</p>
+        <div><i class="icon icon-diagram"></i>Время измерения 60 сек</div>
+      `,
+      isProf: false,
+      bgColor: '#f7f0f1',
+      dropColor: '#f6e3e5',
+      img: './assets/img/portative/lactate.png'
+    },
+    {
+      type: 'softclix',
+      title: 'Акку-Чек Софткликс',
+      subtitle: 'Индивидуальная ручка-прокалыватель с ланцетами',
+      description: '',
+      hoverDescription: `
+        <p>Уникальная технология точного движения ланцета сводит к минимуму болезненные ощущения при проколе. Механизм взвода и спуска сделан по образу и подобию обычной авторучки.</p>
+      `,
+      isProf: false,
+      bgColor: '#f6f4f0',
+      dropColor: '#f1ede9',
+      img: './assets/img/portative/softclix.png'
+    },
+    {
+      type: 'accucheck',
+      title: 'Ланцеты Accu-Chek Safe-T-Pro-Plus ',
+      subtitle: 'Стерильные ланцеты с регулировкой глубины прокола (200 штук)',
+      description: '',
+      hoverDescription: `
+        <p>Уникальность конструкции позволяют менять глубину прокола пальца. Можно выбрать 1.3 мм, 1.8 мм и 2.3 мм.</p>
+      `,
+      isProf: true,
+      bgColor: '#f6eeff',
+      dropColor: '#ecdbff',
+      img: './assets/img/portative/accucheck.png'
+    },
+    {
+      type: 'accuchecksfotclix',
+      title: 'Ланцеты Accu&#8209;Chek Softclix',
+      subtitle: '<span class="hidden-mobile">Ланцеты для ручки-прокалывателя Акку-Чек Софткликс<span>',
+      description: `
+      <ul>
+        <li>упаковка Accu-Chek Softclix №25</li>
+        <li>упаковка Accu-Chek Softclix XL №50</li>
+        <li>упаковка Accu-Chek Softclix №200</li>
+      </ul>
+      `,
+      hoverDescription: `
+        <p>Имеют специальную лазерную заточку и покрыты силиконом для практически безболезненного получения капли крови</p>
+      `,
+      isProf: false,
+      bgColor: '#f3f7f4',
+      dropColor: '#e6f5e9',
+      img: './assets/img/portative/accuchecksfotclix.png'
+    },
+  ]
+
+.portative#portative
+  .container
+    h3 <strong>Портативный биохимический анализатор Аккутренд Плюс позволяет проводить измерения 4 тестов:</strong> глюкозы, холестерина, триглицеридов, лактата.
+    .test-types
+      each test in testTypes
+        div(class=`test ${test.type}` style=`background-color: ${test.bgColor}`)
+          .left
+            .test-title !{test.title}
+            .test-subtitle !{test.subtitle}
+            .test-info
+              div
+                .test-description !{test.description} <div class="wrap hidden-f-desktop"><button class="primary main-cta more-details" for='popup-order'>Купить</button><a href="#">Спецификация</a></div>
+                .test-hover-description.hidden-mobile !{test.hoverDescription} <div class="wrap"><button class="primary main-cta more-details" for='popup-order'>Купить</button><a href="#">Спецификация</a></div>
+          .right
+            img(src=test.img alt=test.title)
+          if test.isProf
+            .prof
+              img(src="./assets/icons/doctor.svg" alt="For Professionals")
+          .drop
+            svg(xmlns="http://www.w3.org/2000/svg" width="219" height="286" viewBox="0 0 219 286")
+              g
+                g(clip-path="url(#clip-5163)")
+                  path(fill=test.dropColor d="M151-16c83.395 0 151 67.605 151 150.999 0 83.395-67.605 151-151 151S0 218.394 0 135c0-83.394 67.605-151 151-151z")
+    .prof-wrap
+      .prof
+        img(src="./assets/icons/doctor.svg" alt="For Professionals")
+      span Для профессионального использования

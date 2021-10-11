@@ -1,0 +1,32 @@
+-
+  var contactList= [
+    {
+      title: 'Горячая линия для физических лиц:',
+      phone: '8-800-100-19-68',
+      phoneNum: '88001001968',
+      schedule: 'Ежедневно с 9:00-21:00 звонок по России бесплатный',
+      img: './assets/icons/24-hours.svg',
+    },
+    {
+      title: 'Горячая линия для юридических лиц:',
+      phone: '8-800-100-68-96',
+      phoneNum: '8-800-100-68-96',
+      schedule: 'Ежедневно с 9:00-21:00 звонок по России бесплатный',
+      img: './assets/icons/call-center.svg',
+    }
+  ]
+
+.feedback#feedback
+  .circle.circle-left
+  .circle.circle-right
+  .container 
+    h3 Обратная связь
+    .feedback-wrap 
+      each contact in contactList
+        .feedback-item
+          .img
+            img(src=contact.img alt='Contact')
+          .info
+            p #{contact.title}
+            a(href=`tel:${contact.phoneNum}`) #{contact.phone}
+            span #{contact.schedule}

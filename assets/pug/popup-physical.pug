@@ -1,0 +1,27 @@
+include _data-physicalList.pug
+
+each physical, key in physicalList
+  .popup.popup-physical(id=`popup-${key}`)
+    .popup-content
+      .popup-title
+        .close
+          img(src='./assets/icons/close.svg' alt='Close popup')
+      .popup-body
+        h5 #{physical.title}
+        .contact-wrap
+          if physical.links.device
+            a.website(href=physical.links.device target='_blank') Прибор Аккутренд Плюс
+          if physical.links.cholesterol
+            a.website(href=physical.links.cholesterol target='_blank') Тест-полоски Холестерин
+          if physical.links.triglycerides
+            a.website(href=physical.links.triglycerides target='_blank') Тест-полоски Триглицериды
+          if physical.links.glucose
+            a.website(href=physical.links.glucose target='_blank') Тест-полоски Глюкоза
+          if physical.links.lactate
+            a.website(href=physical.links.lactate target='_blank') Тест-полоски Лактат
+          if physical.links.softclix
+            a.website(href=physical.links.softclix target='_blank') Акку-Чек Софткликс
+          if physical.links.accuChekSafeTProPlus
+            a.website(href=physical.links.accuChekSafeTProPlus target='_blank') Ланцеты Accu-Chek Safe-T-Pro-Plus
+          if physical.links.accuchekSoftclix
+            a.website(href=physical.links.accuchekSoftclix target='_blank') Ланцеты Accu‑Chek Softclix

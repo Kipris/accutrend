@@ -1,0 +1,42 @@
+-
+  var partnersList = [
+    {
+      title: 'sweetmed',
+      img: './assets/img/svitmed.png',
+    },
+    {
+      title: 'wellsi',
+      img: './assets/img/wellsi.png',
+    },
+    {
+      title: 'alpha-diagnostics',
+      img: './assets/img/alpha.png',
+    },
+    {
+      title: 'zdravcity',
+      img: './assets/img/zdravcity.png',
+    },
+    {
+      title: 'norma-life',
+      img: './assets/img/life.png',
+    }
+  ]
+
+.popup.popup-order#popup-order 
+  .popup-content
+    .popup-title
+      .close
+        img(src='./assets/icons/close.svg' alt='Close popup')
+    .popup-body
+      .info Узнайте больше информации о приборе Аккутренд® Плюс и сервисной поддержке пользователей по бесплатному телефону горячей линии: <a href="tel:88001001968">8-800-100-19-68</a>
+      h5 Купить в розницу (для физ. лиц)
+      .partners-wrap
+        each partner in partnersList
+          .partner.more-details(for=`popup-${partner.title}` class=partner.title)
+            img(src=partner.img alt=partner.title)
+      .juristic
+        h5 Организациям (для юр. лиц)
+        .juristic-wrap
+          include _data-juristicList.pug
+          each juristic in juristicList
+            span.more-details(for=`popup-${juristic.for}`) #{juristic.title}

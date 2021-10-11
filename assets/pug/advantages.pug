@@ -1,0 +1,47 @@
+//- animation of items on scroll
+//- circle animation: move from edges
+-
+  var advantagesList = [
+    {
+      img: './assets/icons/medicine.svg',
+      description: 'Удобное определение холестерина, триглицеридов, глюкозы и лактата с использованием капиллярной крови',
+    },
+    {
+      img: './assets/icons/calendar.svg',
+      description: 'Может хранить до 100 результатов последних измерений включая дату и время',
+    },
+    {
+      img: './assets/icons/mats.svg',
+      description: 'Контрольные материалы для вашей уверенности в достоверности результатов',
+    },
+    {
+      img: './assets/icons/stopwatch.svg',
+      description: 'Высокая точность во всём диапазоне измерений',
+    },
+    {
+      img: './assets/icons/automation.svg',
+      description: 'Встроенная автоматическая проверка производительности и самотестирование прибора для получения надёжных результатов',
+    },
+    {
+      img: './assets/icons/settings.svg',
+      description: 'Широкий диапазон измерения: холестерин – от 3,88 до 7,75 ммоль/л, триглицериды – от 0,8 до 6,9 ммоль/л.',
+    }
+  ]
+
+.advantages#advantages
+  .circle.circle-left
+  .circle.circle-right
+  .container
+    .advantages-inner
+      .left
+        h3.hidden-desktop Преимущества Экспресс-анализатора Аккутренд Плюс
+        img(src='./assets/img/device.png' alt='Accutrend')
+      .right
+        h3.hidden-mobile Преимущества Экспресс-анализатора Аккутренд Плюс
+        .advantages-wrap
+          each advantage in advantagesList
+            .advantage(data-aos='fade-down')
+              .img
+                img(src=advantage.img alt='Advantage')
+              p #{advantage.description}
+

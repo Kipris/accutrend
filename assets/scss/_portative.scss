@@ -1,0 +1,532 @@
+.portative {
+  padding: 62px 0 130px;
+  h3 {
+    font-size: 25px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+  }
+  strong {
+    font-weight: 700;
+  }
+  .test-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 70px -15px 0;
+  }
+  .test {
+    width: calc(50% - 30px);
+    margin: 15px;
+    height: 371px;
+    overflow: hidden;
+    padding: 49px 32px 15px 48px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+    transition: .2s ease-in;
+    &-title {
+      font-size: 25px;
+      line-height: 36px;
+      font-weight: 700;
+      margin-bottom: -4px;
+    }
+    &-subtitle {
+      font-size: 18px;
+      line-height: 36px;
+      font-weight: 500;
+    }
+    &-info {
+      margin-top: 11px;
+      max-width: 280px;
+    }
+    .info {
+      margin-bottom: 17px;
+    }
+    .info + div .icon {
+      position: relative;
+      left: -2px;
+      top: -5px;
+    }
+    .prof {
+      position: absolute;
+      top: 14px;
+      right: 24px;
+      z-index: 1;
+    }
+    ul {
+      margin-bottom: 36px;
+    }
+    li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 19px;
+      &::after {
+        content: '';
+        width: 9px;
+        height: 1px;
+        background-color: #00669d;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
+    .drop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      svg {
+        transition: .2s ease-in;
+      }
+    }
+    .left,
+    .right {
+      position: relative;
+    }
+    .left {
+      z-index: 2;
+      width: 340px;
+    }
+    .right {
+      z-index: 1;
+      width: 137px;
+      min-width: 137px;
+      max-width: 137px;
+    }
+    img {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 137px;
+      height: auto;
+      transition: .2s ease-in;
+    }
+  }
+  .test-types + .prof-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    .prof {
+      margin-right: 22px;
+    }
+  }
+  .test-hover-description {
+    opacity: 0;
+    z-index: -1;
+    height: 0;
+    margin-top: -15px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    p {
+      margin-bottom: 20px;
+    }
+    p + div {
+      display: flex;
+      align-items: center;
+      margin-left: 3px;
+      font-size: 12px;
+      line-height: 22px;
+      font-weight: 400;
+      margin-bottom: 22px;
+    }
+    .icon {
+      margin-right: 21px;
+    }
+  }
+  .wrap {
+    display: flex;
+    align-items: flex-end;
+    button {
+      padding: 10px 19px;
+      width: 115px;
+      margin-right: 15px;
+    }
+    a {
+      font-size: 12px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  .test-description > div {
+    display: flex;
+  }
+  .icon {
+    display: inline-block;
+    margin-right: 20px;
+    width: 21px;
+    min-width: 21px;
+  }
+  .icon-clock {
+    height: 19px;
+    background-image: url('../icons/clock.svg');
+    background-repeat: no-repeat;
+  }
+  .icon-stripe {
+    height: 23px;
+    background-image: url('../icons/blood-test.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icon-diagram {
+    height: 17px;
+    background-image: url('../icons/diagram.svg');
+    background-repeat: no-repeat;
+  }
+  .prof {
+    position: relative;
+    background-color: #ff4661;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    img {
+      position: absolute;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 27px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portative {
+    padding: 31px 0 59px;
+    .container {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 30px;
+      margin: 0 10px 10px;
+    }
+    .test-types {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+    }
+    .test {
+      // width: 100%;
+      // margin: 15px 0;
+      height: 214px;
+      padding: 25px 21px 15px;
+      margin-bottom: 2px;
+      &.glucose .info {
+        margin-top: 21px;
+      }
+      &.lactate .info {
+        margin-top: 21px;
+      }
+      &.softclix {
+        .test-title {
+          max-width: 100px;
+          margin-bottom: 7px;
+        }
+        .test-subtitle {
+          max-width: 140px;
+        }
+        .right img {
+          top: 0;
+          left: -6px;
+          width: 89px;
+        }
+      }
+      &.accucheck {
+        .test-title {
+          width: 175px;
+          margin-bottom: 11px;
+        }
+        .test-subtitle {
+          max-width: 140px;
+        }
+        .right img {
+          top: 28px;
+          left: -51px;
+          width: 139px;
+        }
+      }
+      &.accuchecksfotclix {
+        .test-title {
+          width: 175px;
+        }
+        .test-info {
+          margin-top: 10px;
+          max-width: 150px;
+        }
+        li {
+          margin-bottom: 4px;
+        }
+        .right img {
+          width: 91px;
+          top: 13px;
+          left: -5px;
+        }
+      }
+      .prof {
+        top: 6px;
+        right: 17px;
+      }
+      &-title {
+        font-size: 14px;
+        line-height: 19.53px;
+        margin-bottom: -2px;
+      }
+      &-subtitle {
+        font-size: 12px;
+        line-height: 19.53px;
+        font-weight: 500;
+      }
+      &-info {
+        max-width: 180px;
+        margin-top: 3px;
+        font-size: 9px;
+        line-height: 9.77px;
+        font-weight: 400;
+      }
+      ul {
+        margin-bottom: 17px;
+      }
+      .test-hover-description,
+      li {
+        font-size: 10px;
+        line-height: 14px;
+      }
+      li {
+        padding-left: 16px;
+        margin-bottom: 14px;
+        &::after {
+          width: 5px;
+          top: 8px;
+        }
+      }
+      .right {
+        position: absolute;
+        right: 20px;
+        width: 83px;
+        min-width: 83px;
+        max-width: 83px;
+      }
+      .info {
+        margin-bottom: 11px;
+      }
+      .info + div .icon {
+        left: 3px;
+      }
+      .drop {
+        transform: scale(0.54);
+        transform-origin: 100% 0;
+      }
+      img {
+        width: 83px;
+        top: 8px;
+        left: 4px;
+      }
+    }
+    .test-description {
+      max-width: 160px;
+    }
+    .icon {
+      margin-right: 5px;
+    }
+    .icon-clock {
+      width: 10px;
+      min-width: 10px;
+      height: 10px;
+      background-size: contain;
+    }
+    .icon-stripe {
+      width: 10px;
+      min-width: 10px;
+      height: 12px;
+      background-size: contain;
+    }
+    .wrap {
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      button {
+        padding: 9px 19px;
+        width: 82px;
+        margin-right: 7px;
+        font-size: 12px;
+        line-height: 10.24px;
+      }
+      a {
+        position: relative;
+        top: -5px;
+        font-size: 10px;
+        line-height: 22px;
+      }
+    }
+    .test-types + .prof-wrap {
+      width: 242px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 23px;
+    }
+    .prof {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+      img {
+        width: 16px !important;
+        height: 18px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .portative {
+    .test {
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .portative {
+    .test {
+      &:hover {
+        padding-top: 24px;
+        box-shadow: 0 10px 62px 14px rgba(213, 198, 230, 0.47);
+        .test-description {
+          opacity: 0;
+          z-index: -1;
+          height: 0;
+        }
+        .test-hover-description {
+          opacity: 1;
+          z-index: 1;
+          height: auto;
+        }
+        .right img {
+          width: 155px;
+          left: -20px;
+        }
+        svg {
+          width: 231px;
+          height: 299px;
+        }
+      }
+      &.glucose {
+        .info {
+          margin-top: 79px;
+        }
+        .test-hover-description {
+          margin-top: -85px;
+        }
+      }
+      &.lactate {
+        .info {
+          margin-top: 48px;
+        }
+      }
+      &.softclix {
+        .test-title {
+          max-width: 280px;
+          margin-bottom: 12px;
+        }
+        .test-subtitle {
+          line-height: 33px;
+          max-width: 280px;
+        }
+        .right img {
+          top: 0px;
+          left: -50px;
+          width: 142px;
+        }
+        .test-hover-description {
+          margin-top: -5px;
+        }
+        &:hover .right img {
+          left: -60px;
+        }
+      }
+      &.accucheck {
+        .test-title {
+          max-width: 201px;
+          margin-bottom: 2px;
+        }
+        .test-subtitle {
+          max-width: 230px;
+          line-height: 32px;
+        }
+        .test-hover-description {
+          margin-top: -5px;
+        }
+        .right img {
+          top: 26px;
+          left: -117px;
+          width: 266px;
+        }
+        &:hover .right img {
+          width: 286px;
+          left: -137px;
+        }
+      }
+      &.accuchecksfotclix {
+        .test-title {
+          max-width: 250px;
+        }
+        .right img {
+          width: 163px;
+          top: -6px;
+          left: -26px;
+        }
+        &:hover .right img {
+          width: 183px;
+          left: -46px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .portative {
+    .test-subtitle {
+      line-height: normal;
+    }
+    .test {
+      ul {
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 9px;
+      }
+      .right {
+        width: 13.824419778vw;
+        min-width: 13.824419778vw;
+        max-width: 13.824419778vw;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .test-hover-description p {
+      margin-bottom: 5px;
+    }
+    .test-hover-description p+div {
+      margin-bottom: 2px;
+    }
+    .test.accucheck .test-subtitle,
+    .test.softclix .test-subtitle {
+      line-height: normal;
+    }
+  }
+}

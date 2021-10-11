@@ -1,0 +1,101 @@
+// характеристики
+-
+  var featureList = [
+    {
+      title: 'Диапазон температур',
+      defaultClass: 'open',
+      info: `
+      <div>
+        <strong>Диапазон температур для выполнения измерений проб пациентов:</strong>
+        <div>
+          <p>В зависимости от измеряемого показателя:</p>
+          <ul>
+            <li>для холестерина: 18-35С</li>
+            <li>для триглицеридов: 18-30С</li>
+            <li>для лактата: 15-35С</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <strong>Диапазон температур для выполнения измерений контрольных растворов:</strong>
+        <div>
+          <p>В зависимости от измеряемого показателя:</p>
+          <ul>
+            <li>для холестерина: 18-35С</li>
+            <li>для триглицеридов: 18-30С</li>
+            <li>для лактата: 15-35С</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <strong>Относительная влажность воздуха: </strong>
+        <div>
+          <p>10-85%</p>
+        </div>
+      </div>
+      `,
+    },
+    {
+      title: 'Диапазон измеряемых значений',
+      defaultClass: '',
+      info: `
+      <div class="char-info">
+        <strong>Глюкоза крови:</strong>
+        <p>20–600 мг/дл (1,1–33,3 ммоль/л).</p>
+      </div>
+      <div class="char-info">
+        <strong>Холестерин:</strong>
+        <p>150–300 мг/дл (3,88–7,76 ммоль/л).</p>
+      </div>
+      <div class="char-info">
+        <strong>Триглицериды:</strong>
+        <p>70–600 мг/дл (0,80–6,86 ммоль/л).</p>
+      </div>
+      <div class="char-info">
+        <strong>Лактат:</strong>
+        <p>0,8–21,7 ммоль/л (в крови); 0,7–26 ммоль/л (в плазме).</p>
+      </div>
+      `,
+    },
+    {
+      title: 'Характеристики',
+      defaultClass: '',
+      info: `
+      <div class="char-info">
+        <strong>Память:</strong>
+        <p>100 результатов измерения по каждому показателю, с датой, временем и дополнительной информацией.</p>
+      </div>  
+      <div class="char-info">
+        <strong>Источник питания:</strong>
+        <p>4 щелочно-марганцевые батареи 1,5 В, тип ААА.</p>
+      </div>
+      <div class="char-info">
+        <strong>Количество измерений на одном наборе батарей:</strong>
+        <p>Не менее 1000 измерений (с новыми батареями).</p>
+      </div>
+      <div class="char-info">
+        <strong>Класс безопасности:</strong>
+        <p>III</p>
+      </div>
+      <div class="char-info">
+        <strong>Размеры:</strong>
+        <p>154 х 81 х 30 мм</p>
+      </div>
+      <div class="char-info">
+        <strong>Масса:</strong>
+        <p>Прибл. 140 г.</p>
+      </div>
+      `,
+    }
+  ]
+
+.features#features
+  .container
+    h3 Технические характеристики
+    ul#features-accordion.features-wrap.accordion
+      each feature in featureList
+        li(class=feature.defaultClass)
+          .title 
+            span #{feature.title}
+            i.icon.icon-open
+          .info !{feature.info}

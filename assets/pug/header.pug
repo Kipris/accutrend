@@ -1,0 +1,31 @@
+-
+  var navigation = [
+    {
+      title: 'Преимущества',
+      href: '#advantages',
+    },
+    {
+      title: 'Характеристики',
+      href: '#features',
+    },
+    {
+      title: 'Вопросы и ответы',
+      href: '#faq',
+    },
+    {
+      title: 'Контакты',
+      href: '#feedback',
+    },
+  ]
+
+header.header
+  .container
+    .header-inner
+      .logo
+        img(src='./assets/icons/logo.svg' alt='Logo')
+      .toggler.hidden-f-desktop
+        span
+      nav
+        each item in navigation
+          a.scroll-to(href=item.href) #{item.title}
+      button.primary.main-cta.more-details(for='popup-order') Купить

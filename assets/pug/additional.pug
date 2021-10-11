@@ -1,0 +1,46 @@
+-
+  var additionalList = [
+    
+    {
+      title: 'Аккутренд плюс руководство пользователя',
+      href: './assets/pdf/Аккутренд_плюс_руководство_пользователя.pdf',
+      info: 'pdf 1.5 мв',
+    },
+    {
+      title: 'Инструкция тест-полоски Аккутренд холестерин',
+      href: './assets/pdf/Тест-полоски_Аккутренд_холестерин_№5.pdf',
+      info: 'pdf 1.5 мв',
+    },
+    {
+      title: 'Инструкция тест-полоски Аккутренд триглицериды',
+      href: './assets/pdf/Тест-полоски_Аккутренд_триглицериды_№25.pdf',
+      info: 'pdf 1.5 мв',
+    },
+    {
+      title: 'История создания прибора',
+      href: './assets/pdf/История_создания_прибора.pdf',
+      info: 'pdf 1.5 мв',
+    },
+    {
+      title: 'Видеоинструкция',
+      href: 'https://www.youtube.com/watch?v=KcRdYvO3jDk&t=2s&ab_channel=accutrendrussia',
+      info: 'pdf 1.5 мв',
+    },
+    {
+      title: 'Дислипидемия и жиры',
+      href: './assets/pdf/Дислипидемия_и_жиры.pdf',
+      info: 'pdf 1.5 мв',
+    },
+  ]
+
+.additional#additional
+  .container
+    h3 Дополнительная информация
+    .additional-wrap
+      each additional in additionalList
+        .additional-item
+          div
+            img(src='./assets/icons/download.svg' alt='Download')
+          div
+            a.title(href=additional.href target="_blank") #{additional.title}
+            .info #{additional.info}

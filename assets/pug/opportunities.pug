@@ -1,0 +1,25 @@
+//- https://codepen.io/codewunder/pen/Bnspb/
+-
+  var opportunityList = [
+    {
+      description: 'Время измерения холестерина и триглицеридов – до 180 секунд',
+      img: './assets/img/opportunities/1-open.jpg'
+    },
+    {
+      description: 'Простота использования делает устройство удобным для применения в кабинете врача или в стационаре',
+      img: './assets/img/opportunities/2-open.jpg'
+    },
+    {
+      description: 'Срок годности тестов не зависит от даты вскрытия. Тубу с тест-полосками хранят при комнатной температуре',
+      img: './assets/img/opportunities/3-open.jpg'
+    }
+  ]
+
+.opportunities#opportunities
+  .container
+    h3 Уникальные возможности Аккутренда
+  .opportunities-wrap
+    each opportunity, index in opportunityList
+      .opportunity(style=`background-image: url(${opportunity.img})`)
+        span 0#{index + 1}
+        p #{opportunity.description}

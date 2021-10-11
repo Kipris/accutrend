@@ -1,0 +1,60 @@
+-
+  var slides = [
+    {
+      title: 'Аккутренд Плюс',
+      subtitle: 'Экспресс-анализатор',
+      description: 'Скрининг сердечно-сосудистых факторов риска',
+      text: `
+        <p class="hidden-mobile">Портативное устройство для определения ключевых параметров, используемых для выявления сердечно-сосудистых заболеваний:</p>
+        <ul>
+          <li>общего холестерина</li>
+          <li>глюкозы</li>
+          <li>триглицеридов</li>
+          
+          <li>лактата</li>
+        </ul>
+        <span class="hidden-mobile">Прибор подходит для домашнего и профессионального использования</span>
+      `,
+      img: './assets/img/device.png'
+    },
+    {
+      title: 'Аккутренд Плюс',
+      subtitle: 'Экспресс-анализатор',
+      description: 'Скрининг сердечно-сосудистых факторов риска',
+      text: `
+        <div class="hidden-mobile">
+          <p>"Может быть использован для измерения уровня глюкозы и холестерина в рамках реализации программы диспансеризации населения, порядок проведения которой установлен в 
+          <a target="_blank" href="https://minzdrav.gov.ru/documents/9637-prikaz-ministerstva-zdravoohraneniya-rossiyskoy-federatsii-ot-13-03-2019-124n-ob-utverzhdenii-poryadka-provedeniya-profilakticheskogo-meditsinskogo-osmotra-i-dispanserizatsii-opredelennyh-grupp-vzroslogo-naseleniya">Приказе Министерства здравоохранения РФ от 13 марта 2019 г. № 124н "Об утверждении порядка проведения профилактического медицинского осмотра и диспансеризации определенных групп взрослого населения</a>".</p>
+          <p>Кроме того, широкий спектр измеряемых параметров позволяет использовать экспресс-анализатор Accutrend Plus для оснащения ФАПов в соответствии с 
+          <a target="_blank" href="https://docs.cntd.ru/document/902355054">Приказом Министерства здравоохранения и социального развития РФ от 15 мая 2012 г. N 543н "Об утверждении Положения об организации оказания первичной медико-санитарной помощи взрослому населению</a>".</p>
+        </div>
+        <div class="hidden-desktop">
+          <p>Может быть использован для измерения уровня глюкозы и холестерина в рамках реализации программы диспансеризации населения и для оснащения ФАПов</p>
+        </div>
+      `,
+      img: './assets/img/device_slide_2.png'
+    }
+  ];
+
+.banner#banner
+  .container
+    .circle.circle-left
+    .circle.circle-center
+    .circle.circle-right
+    .circle.circle-hidden
+    .circle.circle-hidden-2
+    .slider
+      each slide, i in slides
+        .slide(class=`slide-${i}`)
+          .left
+            h4 #{slide.subtitle}
+            h1 #{slide.title}
+            .img.hidden-desktop
+              img(src=slide.img)
+            small #{slide.description}
+            .text !{slide.text}
+            .button-wrap
+              button.primary.main-cta.more-details(for='popup-order') Купить
+              a.secondary.scroll-to(role="button" href="#portative") Подробнее
+          .right.hidden-mobile
+            img(src=slide.img)
