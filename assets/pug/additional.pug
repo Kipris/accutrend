@@ -33,7 +33,7 @@
     },
   ]
 
-.additional#additional
+section.additional#additional
   .container
     h3 Дополнительная информация
     .additional-wrap
@@ -42,5 +42,6 @@
           div
             img(src='./assets/icons/download.svg' alt='Download')
           div
-            a.title(href=additional.href target="_blank") #{additional.title}
+            a.title(href=additional.href target="_blank")
+              span #{additional.title}
             .info #{additional.info}

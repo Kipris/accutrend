@@ -40,7 +40,7 @@
         font-weight: 400;
       }
     }
-    .logo + div {
+    .logo + a {
       display: flex;
       align-items: center;
       font-size: 16px;
@@ -48,19 +48,24 @@
       font-weight: 300;
       position: relative;
       right: -41px;
+      color: #fff;
+      text-decoration: none;
       img {
         width: 70px;
         height: 16px;
         margin-left: 11px;
       }
       span {
+        font-size: 16px;
+        line-height: 48px;
+        font-weight: 300;
         font-family: 'Rubik', sans-serif;
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .footer {
     padding: 39px 0 55px;
     &-wrap {
@@ -80,13 +85,9 @@
           margin: 0 0 28px;
         }
       }
-      .logo + div {
+      .logo + a {
         right: auto;
         margin-top: 20px;
-        span {
-          font-size: 16px;
-          line-height: 48px;
-        }
       }
     }
   }

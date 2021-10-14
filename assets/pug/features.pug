@@ -1,4 +1,3 @@
-// характеристики
 -
   var featureList = [
     {
@@ -89,12 +88,12 @@
     }
   ]
 
-.features#features
+section.features#features
   .container
     h3 Технические характеристики
     ul#features-accordion.features-wrap.accordion
       each feature in featureList
-        li(class=feature.defaultClass)
+        li
           .title 
             span #{feature.title}
             i.icon.icon-open

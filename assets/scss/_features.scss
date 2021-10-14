@@ -2,9 +2,6 @@
   padding: 59px 0 0;
   h3 {
     text-align: center;
-    font-size: 45px;
-    line-height: 36px;
-    font-weight: 700;
     margin-bottom: 43px;
   }
   .info {
@@ -47,7 +44,21 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .features {
+    padding: 29px 0 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .features {
+    h3 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
   .features {
     padding: 5px 0 0;
     h3 {

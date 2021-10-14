@@ -74,11 +74,22 @@ button,
   }
 }
 
+section {
+  h3 {
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: 700;
+  }
+}
+
 .circle {
   position: absolute;
   border: 108px solid #7368fe;
   border-radius: 50%;
   opacity: 0.43;
+  transition-timing-function: cubic-bezier(.25,.5,.25,1.25);
+  transition-duration: .8s;
+  transition-property: transform;
 }
 
 .slick-track {
@@ -94,6 +105,7 @@ button,
   list-style: none; 
   z-index: 1000;
   li {
+    position: relative;
     cursor: pointer;
     padding: 14px;
   } 
@@ -104,33 +116,28 @@ button,
     border: none;
     font-size: 0;
     background-color: #bfbfbf;
-    min-width: 9px;
-    max-width: 9px;
-    min-height: 9px;
-    max-height: 9px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     &::after {
       content: '';
       position: absolute;
-      left: 50%;
       top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 7px;
-      height: 7px;
-      border: 1.5px solid #b0aff5;
-      border-radius: 50%;
+      width: 21px;
+      height: 21px;
+      background-color: transparent;
+      background-image: url('../icons/dot.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
       opacity: 0;
-      transition: transform .2s ease-in
     }
   }
   .slick-active {
-    button {
-      position: relative;
-      background-color: #b2b0f6;
-      &::after {
-        transform: translate(-50%, -50%) scale(1.8);
-        opacity: 1;
-      }
+    button::after {
+      opacity: 1;
     }
   }
 }
@@ -138,11 +145,6 @@ button,
 .accordion {
   width: 74.5%;
   margin: 0 auto;
-  li:first-child {
-    .info {
-      display: block;
-    }
-  }
   li.open .icon-open {
     transform: rotate(45deg);
   }
@@ -198,13 +200,6 @@ button,
   }
 }
 
-@media (max-width: 1200px) {
-  .container {
-    width: calc(100% - 40px);
-    margin: 0 20px;
-  }
-}
-
 .hidden-desktop {
   display: block !important;
 }
@@ -224,13 +219,34 @@ button,
   display: none !important;
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 1200px) {
+  .container {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+  section {
+    h3 {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
   .accordion {
     width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  section {
+    h3 {
+      font-size: 38px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
   .accordion {
     .title {
       font-size: 18px;
@@ -254,7 +270,7 @@ button,
   }
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .hidden-desktop {
     display: none !important;
   }

@@ -1,3 +1,5 @@
+$transition: transform .3s linear;
+
 .portative {
   padding: 62px 0 130px;
   h3 {
@@ -28,7 +30,81 @@
     line-height: 18px;
     font-weight: 400;
     border-radius: 4px;
-    transition: .2s ease-in;
+    transition: .3s ease-in;
+    box-shadow: none;
+    &-wrap {
+      position: relative;
+      z-index: 2;
+      transition: $transition;
+      transform: none;
+      display: flex;
+      width: 100%;
+    }
+    .left {
+      position: relative;
+      z-index: 2;
+      max-width: 260px;
+    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      img {
+        position: relative;
+        max-width: 260px;
+        width: 17vw;
+        height: auto;
+        right: -61px;
+        bottom: 0.9vw;
+        transition: $transition;
+        transform-origin: 100% 0;
+      }
+    }
+    .drop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: $transition;
+    }
+    .prof {
+      position: absolute;
+      top: 23px;
+      right: 24px;
+      z-index: 2;
+    }
+  }
+  .prof {
+    position: relative;
+    background-color: #ff4661;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    img {
+      position: absolute;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 27px;
+    }
+  }
+  .prof-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    .prof {
+      margin-right: 22px;
+    }
+  }
+}
+
+// left
+.portative {
+  .test {
     &-title {
       font-size: 25px;
       line-height: 36px;
@@ -37,26 +113,43 @@
     }
     &-subtitle {
       font-size: 18px;
-      line-height: 36px;
+      line-height: 30px;
       font-weight: 500;
     }
     &-info {
       margin-top: 11px;
       max-width: 280px;
     }
+    &-description {
+      position: relative;
+    }
+    &-hover-description {
+      position: relative;
+      opacity: 0;
+      z-index: -1;
+      height: 0;
+      margin-top: -15px;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      p {
+        margin-bottom: 16px;
+      }
+      p + div {
+        display: flex;
+        align-items: center;
+        margin-left: 3px;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 400;
+        margin-bottom: 22px;
+      }
+      .icon.icon-diagram {
+        margin-right: 19px;
+      }
+    }
     .info {
       margin-bottom: 17px;
-    }
-    .info + div .icon {
-      position: relative;
-      left: -2px;
-      top: -5px;
-    }
-    .prof {
-      position: absolute;
-      top: 14px;
-      right: 24px;
-      z-index: 1;
     }
     ul {
       margin-bottom: 36px;
@@ -75,72 +168,34 @@
         top: 10px;
       }
     }
-    .drop {
-      position: absolute;
-      top: 0;
-      right: 0;
-      svg {
-        transition: .2s ease-in;
-      }
-    }
-    .left,
-    .right {
-      position: relative;
-    }
-    .left {
-      z-index: 2;
-      width: 340px;
-    }
-    .right {
-      z-index: 1;
-      width: 137px;
-      min-width: 137px;
-      max-width: 137px;
-    }
-    img {
-      position: absolute;
-      top: 10px;
-      left: 0;
-      width: 137px;
-      height: auto;
-      transition: .2s ease-in;
-    }
-  }
-  .test-types + .prof-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-    .prof {
-      margin-right: 22px;
-    }
-  }
-  .test-hover-description {
-    opacity: 0;
-    z-index: -1;
-    height: 0;
-    margin-top: -15px;
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 400;
-    p {
-      margin-bottom: 20px;
-    }
-    p + div {
+    .test-description > div {
       display: flex;
-      align-items: center;
-      margin-left: 3px;
-      font-size: 12px;
-      line-height: 22px;
-      font-weight: 400;
-      margin-bottom: 22px;
     }
-    .icon {
-      margin-right: 21px;
-    }
+  }
+  .icon {
+    position: relative;
+    display: inline-block;
+    margin-right: 14px;
+    width: 21px;
+    min-width: 21px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icon-clock {
+    height: 19px;
+    background-image: url('../icons/clock.svg');
+    top: 1px;
+    left: -3px;
+  }
+  .icon-stripe {
+    height: 23px;
+    background-image: url('../icons/blood-test.svg');
+    top: 2px;
+    left: -4px;
+  }
+  .icon-diagram {
+    height: 17px;
+    background-image: url('../icons/diagram.svg');
   }
   .wrap {
     display: flex;
@@ -156,73 +211,156 @@
       font-weight: 400;
     }
   }
-  .test-description > div {
-    display: flex;
-  }
-  .icon {
-    display: inline-block;
-    margin-right: 20px;
-    width: 21px;
-    min-width: 21px;
-  }
-  .icon-clock {
-    height: 19px;
-    background-image: url('../icons/clock.svg');
-    background-repeat: no-repeat;
-  }
-  .icon-stripe {
-    height: 23px;
-    background-image: url('../icons/blood-test.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .icon-diagram {
-    height: 17px;
-    background-image: url('../icons/diagram.svg');
-    background-repeat: no-repeat;
-  }
-  .prof {
-    position: relative;
-    background-color: #ff4661;
-    width: 48px;
-    height: 48px;
-    border-radius: 48px;
-    img {
-      position: absolute;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%);
-      width: 24px;
-      height: 27px;
+}
+
+// diff
+.portative {
+  .test {
+    &.glucose {
+      .info {
+        margin-top: 79px;
+      }
+      .test-hover-description {
+        margin-top: -85px;
+      }
+    }
+    &.lactate {
+      .info {
+        margin-top: 48px;
+      }
+    }
+    &.softclix {
+      .test-title {
+        margin-bottom: 12px;
+      }
+      .test-subtitle {
+        width: 220px;
+      }
+      .test-hover-description {
+        margin-top: -5px;
+      }
+      .right {
+        img {
+          right: -12px;
+          bottom: 22px;
+        }
+      }
+    }
+    &.accucheck {
+      .test-title {
+        max-width: 201px;
+        margin-bottom: 2px;
+      }
+      .test-subtitle {
+        max-width: 230px;
+      }
+      .test-hover-description {
+        margin-top: -5px;
+        p {
+          padding-right: 0.9vw;
+        }
+      }
+      .right {
+        img {
+          max-width: 230px;
+          right: -10px;
+        }
+      }
+    }
+    &.accuchecksfotclix {
+      .test-title {
+        max-width: 250px;
+      }
+      .right {
+        img {
+          right: -49px;
+          bottom: 13px;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 768px) {
+// hover
+@media screen and (min-width: 992px) {
+  .portative {
+    .test {
+      &:hover {
+        box-shadow: 0 10px 62px 14px rgba(213, 198, 230, 0.47);
+        .test-description {
+          opacity: 0;
+          z-index: -1;
+          height: 0;
+        }
+        .test-hover-description {
+          opacity: 1;
+          z-index: 1;
+          height: auto;
+        }
+        .test-wrap {
+          transform: translateY(-25px);
+        }
+        .right img {
+          transform: scale(1.15) translate(9px, -3px);
+        }
+        .drop {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .hidden-desktop {
+      display: none !important;
+    }
+    .hidden-f-desktop {
+      display: none !important;
+    }
+    .hidden-g-desktop {
+      display: none !important;
+    }
+    .hidden-mobile {
+      display: block !important;
+    }
+    .hidden-f-mobile {
+      display: flex !important;
+    }
+    .hidden-g-mobile {
+      display: grid !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .portative {
+    padding: 62px 0 90px;
+    .test-types {
+      margin: 50px -15px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
   .portative {
     padding: 31px 0 59px;
     .container {
       width: calc(100% - 20px);
       margin: 0 10px;
     }
-    h3 {
-      font-size: 18px;
-      line-height: 30px;
-      margin: 0 10px 10px;
-    }
     .test-types {
-      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 0;
     }
     .test {
-      // width: 100%;
-      // margin: 15px 0;
+      width: 100%;
+      margin: 15px 0;
       height: 214px;
       padding: 25px 21px 15px;
       margin-bottom: 2px;
+      &-wrap {
+        width: 100%;
+      }
       &.glucose .info {
         margin-top: 21px;
       }
@@ -238,9 +376,9 @@
           max-width: 140px;
         }
         .right img {
-          top: 0;
-          left: -6px;
-          width: 89px;
+          top: 4px;
+          left: 4px;
+          width: 169px;
         }
       }
       &.accucheck {
@@ -251,10 +389,12 @@
         .test-subtitle {
           max-width: 140px;
         }
-        .right img {
-          top: 28px;
-          left: -51px;
-          width: 139px;
+        .right {
+          right: 0;
+          top: 0;
+          img {
+            width: 139px;
+          }
         }
       }
       &.accuchecksfotclix {
@@ -268,15 +408,17 @@
         li {
           margin-bottom: 4px;
         }
-        .right img {
-          width: 91px;
-          top: 13px;
-          left: -5px;
+        .right {
+          top: 8px;
+          right: -20px;
+          img {
+            width: 140px;
+          }
         }
       }
       .prof {
-        top: 6px;
-        right: 17px;
+        top: 13px;
+        right: 12px;
       }
       &-title {
         font-size: 14px;
@@ -311,12 +453,12 @@
           top: 8px;
         }
       }
-      .right {
-        position: absolute;
-        right: 20px;
-        width: 83px;
-        min-width: 83px;
-        max-width: 83px;
+      div.right {
+        top: -17px;
+        right: -40px;
+        img {
+          width: 163px;
+        }
       }
       .info {
         margin-bottom: 11px;
@@ -353,9 +495,7 @@
       background-size: contain;
     }
     .wrap {
-      position: absolute;
-      left: 0;
-      bottom: -3px;
+      margin-top: 13px;
       button {
         padding: 9px 19px;
         width: 82px;
@@ -386,147 +526,33 @@
         height: 18px !important;
       }
     }
-  }
-}
-
-@media (max-width: 650px) {
-  .portative {
-    .test {
-      width: 100%;
-      margin: 15px 0;
+    .hidden-desktop {
+      display: block !important;
+    }
+    .hidden-f-desktop {
+      display: flex !important;
+    }
+    .hidden-g-desktop {
+      display: grid !important;
+    }
+    .hidden-mobile {
+      display: none !important;
+    }
+    .hidden-f-mobile {
+      display: none !important;
+    }
+    .hidden-g-mobile {
+      display: none !important;
     }
   }
 }
 
-@media (min-width: 769px) {
+@media screen and (max-width: 768px) {
   .portative {
-    .test {
-      &:hover {
-        padding-top: 24px;
-        box-shadow: 0 10px 62px 14px rgba(213, 198, 230, 0.47);
-        .test-description {
-          opacity: 0;
-          z-index: -1;
-          height: 0;
-        }
-        .test-hover-description {
-          opacity: 1;
-          z-index: 1;
-          height: auto;
-        }
-        .right img {
-          width: 155px;
-          left: -20px;
-        }
-        svg {
-          width: 231px;
-          height: 299px;
-        }
-      }
-      &.glucose {
-        .info {
-          margin-top: 79px;
-        }
-        .test-hover-description {
-          margin-top: -85px;
-        }
-      }
-      &.lactate {
-        .info {
-          margin-top: 48px;
-        }
-      }
-      &.softclix {
-        .test-title {
-          max-width: 280px;
-          margin-bottom: 12px;
-        }
-        .test-subtitle {
-          line-height: 33px;
-          max-width: 280px;
-        }
-        .right img {
-          top: 0px;
-          left: -50px;
-          width: 142px;
-        }
-        .test-hover-description {
-          margin-top: -5px;
-        }
-        &:hover .right img {
-          left: -60px;
-        }
-      }
-      &.accucheck {
-        .test-title {
-          max-width: 201px;
-          margin-bottom: 2px;
-        }
-        .test-subtitle {
-          max-width: 230px;
-          line-height: 32px;
-        }
-        .test-hover-description {
-          margin-top: -5px;
-        }
-        .right img {
-          top: 26px;
-          left: -117px;
-          width: 266px;
-        }
-        &:hover .right img {
-          width: 286px;
-          left: -137px;
-        }
-      }
-      &.accuchecksfotclix {
-        .test-title {
-          max-width: 250px;
-        }
-        .right img {
-          width: 163px;
-          top: -6px;
-          left: -26px;
-        }
-        &:hover .right img {
-          width: 183px;
-          left: -46px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 769px) and (max-width: 991px) {
-  .portative {
-    .test-subtitle {
-      line-height: normal;
-    }
-    .test {
-      ul {
-        margin-bottom: 16px;
-      }
-      li {
-        margin-bottom: 9px;
-      }
-      .right {
-        width: 13.824419778vw;
-        min-width: 13.824419778vw;
-        max-width: 13.824419778vw;
-        img {
-          width: 100%;
-        }
-      }
-    }
-    .test-hover-description p {
-      margin-bottom: 5px;
-    }
-    .test-hover-description p+div {
-      margin-bottom: 2px;
-    }
-    .test.accucheck .test-subtitle,
-    .test.softclix .test-subtitle {
-      line-height: normal;
+    h3 {
+      font-size: 18px;
+      line-height: 30px;
+      margin: 0 10px 10px;
     }
   }
 }

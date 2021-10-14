@@ -88,12 +88,12 @@
     },
   ]
 
-.faq#faq
+section.faq#faq
   .container
     h3 Вопросы и ответы
     ul#faq-accordion.faq-wrap.accordion
       each faq in faqList
-        li(class=faq.defaultClass)
+        li
           .title 
             span #{faq.title}
             i.icon.icon-open

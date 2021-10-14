@@ -2,12 +2,10 @@
   position: relative;
   overflow: hidden;
   padding: calc(62px + 134px) 0 10px;
-  // height: calc(803px + 134px);
+  min-height: calc(803px + 134px);
   background-color: #EEF0F6;
   .circle {
     transform: none;
-    transition-timing-function: cubic-bezier(.25,.5,.25,1.25);
-    transition-duration: .8s;
   } 
   .circle-left {
     left: -556px;
@@ -96,7 +94,8 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        background-image: url('../icons/heart.svg');
+        background-image: url('../icons/heart.png');
+        background-size: contain;
         background-repeat: no-repeat;
         width: 14px;
         height: 14px;
@@ -127,10 +126,17 @@
         top: calc(50% + 17px);
       }
     }
+    .text p {
+      font-size: 14px;
+    }
+  }
+  .left {
+    position: relative;
+    z-index: 1;
   }
   .right {
     position: relative;
-    top: -4px;
+    top: 71px;
     left: 380px;
     line-height: 0;
     img {
@@ -152,7 +158,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .banner {
     .circle.circle-center.moved {
       transform: translateX(-120vw) translateY(-50%);
@@ -172,8 +178,16 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .banner {
+    padding: calc(62px + 44px) 0 10px;
+    min-height: 653px;
+    .text ul {
+      margin: 30px 0 14px;
+    }
+    .button-wrap {
+      margin-top: 20px;
+    }
     .right {
       position: absolute;
       top: calc(50% - 20px);
@@ -187,11 +201,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .banner {
-    padding: 55px 0 50px;
-    // height: 100vh;
-    // height: -webkit-fill-available;
+    padding: 55px 0 10px;
+    min-height: 900px;
     .circle-left,
     .circle-right,
     .circle-hidden-2 {

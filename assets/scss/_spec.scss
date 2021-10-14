@@ -2,9 +2,6 @@
   padding: 63px 0 73px;
   text-align: center;
   h3 {
-    font-size: 45px;
-    line-height: 36px;
-    font-weight: 700;
     margin-bottom: 87px;
   }
   &-wrap {
@@ -33,7 +30,27 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .spec {
+    padding: 23px 0 73px;
+    h3 {
+      margin-bottom: 47px;
+    }    
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .spec {
+    h3 {
+      font-size: 30px;
+    }
+    p {
+      width: 100%;
+    }  
+  }
+}
+
+@media screen and (max-width: 800px) {
   .spec {
     padding: 13px 0 43px;
     h3 {

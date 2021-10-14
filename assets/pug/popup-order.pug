@@ -22,7 +22,8 @@
     }
   ]
 
-.popup.popup-order#popup-order 
+.popup.popup-order.inactive#popup-order
+  .popup-overlay
   .popup-content
     .popup-title
       .close
@@ -31,8 +32,9 @@
       .info Узнайте больше информации о приборе Аккутренд® Плюс и сервисной поддержке пользователей по бесплатному телефону горячей линии: <a href="tel:88001001968">8-800-100-19-68</a>
       h5 Купить в розницу (для физ. лиц)
       .partners-wrap
+        include _data-physicalList.pug
         each partner in partnersList
-          .partner.more-details(for=`popup-${partner.title}` class=partner.title)
+          a.partner(href=physicalList[partner.title].links.device class=partner.title target='_blank')
             img(src=partner.img alt=partner.title)
       .juristic
         h5 Организациям (для юр. лиц)

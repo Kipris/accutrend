@@ -43,13 +43,10 @@
     &:nth-child(3) {
       margin-right: 55px;
     }
-    &:last-child {
-      
-    }
   }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .header {
     nav {
       margin-left: -5px;
@@ -65,7 +62,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header {
     padding: 19px 0;
     .logo {
