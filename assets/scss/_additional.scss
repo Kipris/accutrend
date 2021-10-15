@@ -60,13 +60,13 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
   .additional-wrap {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .additional {
     padding: 18px 0 81px;
     background-size: cover;

@@ -231,18 +231,36 @@ section {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .accordion {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 800px) {
   section {
     h3 {
       font-size: 38px;
       line-height: 50px;
     }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+  .hidden-f-desktop {
+    display: none !important;
+  }
+  .hidden-g-desktop {
+    display: none !important;
+  }
+  .hidden-mobile {
+    display: block !important;
+  }
+  .hidden-f-mobile {
+    display: flex !important;
+  }
+  .hidden-g-mobile {
+    display: grid !important;
   }
 }
 
@@ -267,27 +285,6 @@ section {
   }
   ol {
     padding-left: 20px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .hidden-desktop {
-    display: none !important;
-  }
-  .hidden-f-desktop {
-    display: none !important;
-  }
-  .hidden-g-desktop {
-    display: none !important;
-  }
-  .hidden-mobile {
-    display: block !important;
-  }
-  .hidden-f-mobile {
-    display: flex !important;
-  }
-  .hidden-g-mobile {
-    display: grid !important;
   }
 }
 

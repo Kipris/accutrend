@@ -123,13 +123,6 @@
     .circle-right {
       display: none;
     }
-    h3 {
-      position: relative;
-      z-index: 2;
-      font-size: 26px;
-      line-height: normal;
-      margin-bottom: 22px;
-    }
     &-wrap {
       grid-template-columns: repeat(1, 1fr);
       gap: 58px;
@@ -187,6 +180,18 @@
         line-height: 19.08px;
         margin-top: 12px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feedback {
+    h3 {
+      position: relative;
+      z-index: 2;
+      font-size: 26px;
+      line-height: normal;
+      margin-bottom: 22px;
     }
   }
 }
