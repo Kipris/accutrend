@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&amp;display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -27,7 +26,7 @@
           <div class="toggler hidden-f-desktop"><span></span></div>
           <nav><a class="scroll-to" href="#advantages">Преимущества</a><a class="scroll-to" href="#features">Характеристики</a><a class="scroll-to" href="#faq">Вопросы и ответы</a><a class="scroll-to" href="#feedback">Контакты</a>
           </nav>
-          <button class="primary main-cta more-details" for="popup-order">Купить</button>
+          <button class="primary main-cta more-details" data-for="popup-order">Купить</button>
         </div>
       </div>
     </header>
@@ -56,7 +55,7 @@
       <span class="hidden-mobile">Прибор подходит для домашнего и профессионального использования</span>
     </div>
               <div class="button-wrap">
-                <button class="primary main-cta more-details" for="popup-order">Купить</button><a class="secondary scroll-to" role="button" href="#portative">Подробнее</a>
+                <button class="primary main-cta more-details" data-for="popup-order">Купить</button><a class="secondary scroll-to" role="button" href="#portative">Подробнее</a>
               </div>
             </div>
             <div class="right hidden-mobile"><img src="./assets/img/device.png"></div>
@@ -78,7 +77,7 @@
       </div>
     </div>
               <div class="button-wrap">
-                <button class="primary main-cta more-details" for="popup-order">Купить</button><a class="secondary scroll-to" role="button" href="#portative">Подробнее</a>
+                <button class="primary main-cta more-details" data-for="popup-order">Купить</button><a class="secondary scroll-to" role="button" href="#portative">Подробнее</a>
               </div>
             </div>
             <div class="right hidden-mobile"><img src="./assets/img/device_slide_2.png"></div>
@@ -90,7 +89,7 @@
       <div class="container">
         <h3><strong>Портативный биохимический анализатор Аккутренд Плюс позволяет проводить измерения 4 тестов:</strong> глюкозы, холестерина, триглицеридов, лактата.</h3>
         <div class="test-types">
-          <div class="test cholesterol" for="cholesterol" style="background-color: #edf8f9">
+          <div class="test cholesterol" data-for="cholesterol" style="background-color: #edf8f9">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Холестерин</div>
@@ -104,14 +103,14 @@
       </ul>
       <div class="info hidden-f-mobile"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
       <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
-     <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
       <p>
         Предназначены для определения общего холестерина в крови, используются с экспресс-анализатором Аккутренд Плюс.
         Данный тест позволяет определить риск развития сердечно-сосудистых заболеваний и атеросклероза.
       </p>
       <div><i class="icon icon-diagram"></i>Время измерения до 180 сек</div>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -127,7 +126,7 @@
               </svg>
             </div>
           </div>
-          <div class="test triglycerides" for="triglycerides" style="background-color: #f6f4f0">
+          <div class="test triglycerides" data-for="triglycerides" style="background-color: #f6f4f0">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Триглицериды</div>
@@ -141,13 +140,13 @@
     </ul>
     <div class="info hidden-f-mobile"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
     <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
-     <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
     <p>
       Предназначены для определения триглицеридов в крови, используются с экспресс-анализатором Accutrend Plus. Данный тест позволяет определить риск развития ишемической болезни сердца и атеросклероза.
     </p>
     <div><i class="icon icon-diagram"></i>Время измерения макс 174 сек</div>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -163,7 +162,7 @@
               </svg>
             </div>
           </div>
-          <div class="test glucose" for="glucose" style="background-color: #f3f5f7">
+          <div class="test glucose" data-for="glucose" style="background-color: #f3f5f7">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Глюкоза</div>
@@ -173,11 +172,11 @@
                     <div class="test-description">
       <div class="info"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
       <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
-     <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
       <p>Используются для измерения уровня глюкозы в крови</p>
       <div><i class="icon icon-diagram"></i>Время измерения 12 сек</div>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -194,7 +193,7 @@
               </svg>
             </div>
           </div>
-          <div class="test lactate" for="lactate" style="background-color: #f7f0f1">
+          <div class="test lactate" data-for="lactate" style="background-color: #f7f0f1">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Лактат</div>
@@ -207,11 +206,11 @@
       </ul>
       <div class="info"><i class="icon icon-clock"></i>Срок годности не зависит от даты вскрытия тубы</div>
       <div class="hidden-f-mobile"><i class="icon icon-stripe"></i>В каждой упаковке находится одна кодовая полоска</div>
-     <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
       <p>Предназначены для измерения уровня молочной кислоты в крови, при помощи биохимического анализатора Аккутренд Плюс</p>
       <div><i class="icon icon-diagram"></i>Время измерения 60 сек</div>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -227,17 +226,17 @@
               </svg>
             </div>
           </div>
-          <div class="test softclix" for="softclix" style="background-color: #f6f4f0">
+          <div class="test softclix" data-for="softclix" style="background-color: #f6f4f0">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Акку-Чек Софткликс</div>
                 <div class="test-subtitle">Индивидуальная ручка-прокалыватель с ланцетами</div>
                 <div class="test-info">
                   <div>
-                    <div class="test-description"> <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+                    <div class="test-description"> <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
       <p>Уникальная технология точного движения ланцета сводит к минимуму болезненные ощущения при проколе. Механизм взвода и спуска сделан по образу и подобию обычной авторучки.</p>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -253,17 +252,17 @@
               </svg>
             </div>
           </div>
-          <div class="test accucheck" for="accucheck" style="background-color: #f6eeff">
+          <div class="test accucheck" data-for="accucheck" style="background-color: #f6eeff">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Ланцеты Accu-Chek Safe-T-Pro-Plus </div>
                 <div class="test-subtitle">Стерильные ланцеты с регулировкой глубины прокола (200 штук)</div>
                 <div class="test-info">
                   <div>
-                    <div class="test-description"> <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+                    <div class="test-description"> <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
       <p>Уникальность конструкции позволяют менять глубину прокола пальца. Можно выбрать 1.3 мм, 1.8 мм и 2.3 мм.</p>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -280,11 +279,11 @@
               </svg>
             </div>
           </div>
-          <div class="test accuchecksfotclix" for="accuchecksfotclix" style="background-color: #f3f7f4">
+          <div class="test accuchecksfotclix" data-for="accuchecksfotclix" style="background-color: #f3f7f4">
             <div class="test-wrap">
               <div class="left">
                 <div class="test-title">Ланцеты Accu&#8209;Chek Softclix</div>
-                <div class="test-subtitle"><span class="hidden-mobile">Ланцеты для ручки-прокалывателя Акку-Чек Софткликс<span></div>
+                <div class="test-subtitle"><span class="hidden-mobile">Ланцеты для ручки-прокалывателя Акку-Чек Софткликс</span></div>
                 <div class="test-info">
                   <div>
                     <div class="test-description">
@@ -293,10 +292,10 @@
       <li>упаковка Accu-Chek Softclix XL №50</li>
       <li>упаковка Accu-Chek Softclix №200</li>
     </ul>
-     <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                     <div class="test-hover-description hidden-mobile">
       <p>Имеют специальную лазерную заточку и покрыты силиконом для практически безболезненного получения капли крови</p>
-     <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
+     <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div></div>
                   </div>
                 </div>
               </div>
@@ -363,13 +362,13 @@
         <h3>Уникальные возможности Аккутренда</h3>
       </div>
       <div class="opportunities-wrap">
-        <div class="opportunity" style="background-image: url(./assets/img/opportunities/1-open.jpg)"><span>01</span>
+        <div class="opportunity" style="background-image: url(./assets/img/opportunities/1-open.jpg)">
           <p>Время измерения холестерина и триглицеридов – до 180 секунд</p>
         </div>
-        <div class="opportunity" style="background-image: url(./assets/img/opportunities/2-open.jpg)"><span>02</span>
+        <div class="opportunity" style="background-image: url(./assets/img/opportunities/2-open.jpg)">
           <p>Простота использования делает устройство удобным для применения в кабинете врача или в стационаре</p>
         </div>
-        <div class="opportunity" style="background-image: url(./assets/img/opportunities/3-open.jpg)"><span>03</span>
+        <div class="opportunity" style="background-image: url(./assets/img/opportunities/3-open.jpg)">
           <p>Срок годности тестов не зависит от даты вскрытия. Тубу с тест-полосками хранят при комнатной температуре</p>
         </div>
       </div>
@@ -496,7 +495,7 @@
           </div>
         </div>
         <p>*Внимание: тест-полоски и ручка-прокалыватель в комплект не входят</p>
-        <button class="primary main-cta more-details" for="popup-order">Купить</button>
+        <button class="primary main-cta more-details" data-for="popup-order">Купить</button>
       </div>
     </section>
     <section class="additional" id="additional">
@@ -685,7 +684,7 @@
           </div>
           <div class="juristic">
             <h5>Организациям (для юр. лиц)</h5>
-            <div class="juristic-wrap"><span class="more-details" for="popup-alpha">ООО «Альфа-Диагностика»</span><span class="more-details" for="popup-medanko">ООО «МЕДАНКО»</span><span class="more-details" for="popup-medabv">ООО «Медиа Сервис АБВ»</span><span class="more-details" for="popup-mirus-medical">ООО «Мирус Медикал»</span><span class="more-details" for="popup-mirus-medical-spb">ООО &quot;Мирус Медикал Северо-Запад&quot;</span><span class="more-details" for="popup-labora">ООО «Лабора»</span><span class="more-details" for="popup-sakhmeds">ООО «Сахмедсервис»</span><span class="more-details" for="popup-gc-machaon">Группы компаний «Махаон»</span><span class="more-details" for="popup-nda">НДА Деловая Медицинская Компания</span><span class="more-details" for="popup-mdlgroup">ООО &quot;Группа МЕДИАЛАЙН&quot;</span>
+            <div class="juristic-wrap"><span class="more-details" data-for="popup-alpha">ООО «Альфа-Диагностика»</span><span class="more-details" data-for="popup-medanko">ООО «МЕДАНКО»</span><span class="more-details" data-for="popup-medabv">ООО «Медиа Сервис АБВ»</span><span class="more-details" data-for="popup-mirus-medical">ООО «Мирус Медикал»</span><span class="more-details" data-for="popup-mirus-medical-spb">ООО &quot;Мирус Медикал Северо-Запад&quot;</span><span class="more-details" data-for="popup-labora">ООО «Лабора»</span><span class="more-details" data-for="popup-sakhmeds">ООО «Сахмедсервис»</span><span class="more-details" data-for="popup-gc-machaon">Группы компаний «Махаон»</span><span class="more-details" data-for="popup-nda">НДА Деловая Медицинская Компания</span><span class="more-details" data-for="popup-mdlgroup">ООО &quot;Группа МЕДИАЛАЙН&quot;</span>
             </div>
           </div>
         </div>

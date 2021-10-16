@@ -21,5 +21,4 @@ section.opportunities#opportunities
   .opportunities-wrap
     each opportunity, index in opportunityList
       .opportunity(style=`background-image: url(${opportunity.img})`)
-        span 0#{index + 1}
         p #{opportunity.description}

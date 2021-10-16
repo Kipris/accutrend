@@ -113,7 +113,7 @@
     {
       type: 'accuchecksfotclix',
       title: 'Ланцеты Accu&#8209;Chek Softclix',
-      subtitle: '<span class="hidden-mobile">Ланцеты для ручки-прокалывателя Акку-Чек Софткликс<span>',
+      subtitle: '<span class="hidden-mobile">Ланцеты для ручки-прокалывателя Акку-Чек Софткликс</span>',
       description: `
       <ul>
         <li>упаковка Accu-Chek Softclix №25</li>
@@ -136,15 +136,15 @@ section.portative#portative
     h3 <strong>Портативный биохимический анализатор Аккутренд Плюс позволяет проводить измерения 4 тестов:</strong> глюкозы, холестерина, триглицеридов, лактата.
     .test-types
       each test in testTypes
-        div(class=`test ${test.type}` for=test.type style=`background-color: ${test.bgColor}`)
+        div(class=`test ${test.type}` data-for=test.type style=`background-color: ${test.bgColor}`)
           .test-wrap
             .left
               .test-title !{test.title}
               .test-subtitle !{test.subtitle}
               .test-info
                 div
-                  .test-description !{test.description} <div class="wrap hidden-f-desktop"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div>
-                  .test-hover-description.hidden-mobile !{test.hoverDescription} <div class="wrap"><button class="primary main-cta" for='popup-order'>Купить</button><a href="#">Спецификация</a></div>
+                  .test-description !{test.description} <div class="wrap hidden-f-desktop"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div>
+                  .test-hover-description.hidden-mobile !{test.hoverDescription} <div class="wrap"><button class="primary main-cta" data-for='popup-order'>Купить</button><a href="#">Спецификация</a></div>
             .right
               img(src=test.img alt=test.title)
           if test.isProf

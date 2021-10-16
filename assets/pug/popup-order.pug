@@ -41,4 +41,4 @@
         .juristic-wrap
           include _data-juristicList.pug
           each juristic in juristicList
-            span.more-details(for=`popup-${juristic.for}`) #{juristic.title}
+            span.more-details(data-for=`popup-${juristic.for}`) #{juristic.title}
