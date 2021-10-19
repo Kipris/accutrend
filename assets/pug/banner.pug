@@ -15,7 +15,8 @@
         </ul>
         <span class="hidden-mobile">Прибор подходит для домашнего и профессионального использования</span>
       `,
-      img: './assets/img/device.png'
+      img: './assets/img/device.png',
+      defaultClass: 'active',
     },
     {
       title: 'Аккутренд Плюс',
@@ -32,29 +33,40 @@
           <p>Может быть использован для измерения уровня глюкозы и холестерина в рамках реализации программы диспансеризации населения и для оснащения ФАПов</p>
         </div>
       `,
-      img: './assets/img/device_slide_2.png'
+      img: './assets/img/device_slide_2.png',
+      defaultClass: '',
     }
   ];
 
 .banner#banner
+  .slider
+    .slider-list
+      each _ in [1, 2]
+        .slider-item
+          .circle.circle-left
+          .circle.circle-center
+          .circle.circle-right
+    ul.slider-dots
+      li.slider-dot.active
+        button
+      li.slider-dot
+        button
   .container
-    .circle.circle-left
-    .circle.circle-center
-    .circle.circle-right
-    .circle.circle-hidden
-    .circle.circle-hidden-2
-    .slider
+    .banner-wrapper
       each slide, i in slides
-        .slide(class=`slide-${i}`)
+        .slide(class=`slide-${i} ${slide.defaultClass}`)
           .left
             h4 #{slide.subtitle}
             h1 #{slide.title}
             .img.hidden-desktop
-              img(src=slide.img)
-            small #{slide.description}
-            .text !{slide.text}
-            .button-wrap
-              button.primary.main-cta.more-details(data-for='popup-order') Купить
-              a.secondary.scroll-to(role="button" href="#portative") Подробнее
+              .img-inner
+                img(src=slide.img alt=slide.title)
+            .text-wrap
+              small #{slide.description}
+              .text !{slide.text}
+              .button-wrap
+                button.primary.main-cta.more-details(data-for='popup-order') Купить
+                a.secondary.scroll-to(role="button" href="#portative") Подробнее
           .right.hidden-mobile
-            img(src=slide.img)
+            .img-wrap
+              img(src=slide.img alt=slide.title)

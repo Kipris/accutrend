@@ -82,22 +82,25 @@ section {
   }
 }
 
+// .circle {
+//   position: absolute;
+//   border: 108px solid #7368fe;
+//   border-radius: 50%;
+//   opacity: 0.43;
+//   transition-timing-function: cubic-bezier(.25,.5,.25,1.25);
+//   transition-duration: .8s;
+//   transition-property: transform;
+// }
+
 .circle {
   position: absolute;
   border: 108px solid #7368fe;
   border-radius: 50%;
   opacity: 0.43;
-  transition-timing-function: cubic-bezier(.25,.5,.25,1.25);
-  transition-duration: .8s;
-  transition-property: transform;
 }
 
 .slick-track {
   display: flex;
-}
-
-.slick-list {
-  overflow: visible;
 }
 
 .slick-dots {
@@ -285,7 +288,7 @@ section {
       right: 0px;
     }
   }
-  .slick-dots {
+  .slider-dots {
     bottom: auto;
     top: 563px;
   }
